@@ -1,5 +1,5 @@
 source "https://rubygems.org"
-
+gem "wdm", ">= 0.1.0"
 gem "dotenv"
 gem "github-pages"
 gem "jekyll"
