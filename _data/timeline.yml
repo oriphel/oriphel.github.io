@@ -17,45 +17,45 @@
 #     - tag: Rails
 #   timeline-side: right
 
-- title: airbnb
+- title: Entrenamiento 1 nodo
   title-url: https://example.com/
-  date: Sep 2019 - Present
-  subtitle: Fullstack Developer
-  tags:
-    - tag: React
-    - tag: Javascript
-    - tag: Ruby
-    - tag: Rails
+  date: Mayo 2024 - Presente
+  subtitle: Equipo Desarrollo CENIA
+  #tags:
+  #  - tag: React
+  #  - tag: Javascript
+  #  - tag: Ruby
+  #  - tag: Rails
   timeline-side: right
 
-- title: Google
+- title: Entrenamiento 2 nodos
   title-url: https://example.com/
-  date: Mar 2019 - Sep 2019
-  subtitle: Software Engineer as Intern
-  tags:
-    - tag: Flutter
-    - tag: Dart
-    - tag: Keycloak
+  date: Junio 2024 - Presente
+  subtitle: Equipo Desarrollo CENIA
+  #tags:
+  #  - tag: Flutter
+  #  - tag: Dart
+  #  - tag: Keycloak
   timeline-side: right
 
-- title: Super University
+- title: Entrenamiento 11 nodos
   title-url: https://example.com/
-  date: 2017 - 2019
-  subtitle: M.Sc. Computer Science
+  date: Agosto 2024 - Diciembre 2024
+  subtitle: Equipo Desarrollo CENIA
   timeline-side: left
 
-- title: Facebook
+- title: Pre-entrenamiento Final
   title-url: https://example.com/
-  date: Sep 2017 - Mar 2019
-  subtitle: Front-End Developer as Intern
+  date: Octubre 2024 - Diciembre 2024
+  subtitle: Equipo Desarrollo CENIA
   tags:
-    - tag: React
-    - tag: Node
-    - tag: Javascript
+    - tag: UTA
+    - tag: H100
+  #  - tag: Javascript
   timeline-side: right
 
-- title: Super University
-  title-url: https://example.com/
-  date: 2014 - 2017
-  subtitle: B.A. Computer Science
-  timeline-side: left
+#- title: Super University
+#  title-url: https://example.com/
+#  date: 2014 - 2017
+#  subtitle: B.A. Computer Science
+#  timeline-side: left

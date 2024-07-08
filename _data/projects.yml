@@ -13,8 +13,8 @@
 #     - tag: AngularJS
 #     - tag: Node
 
-- name: project X
-  descr: "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam"
+- name: Universidad de Tarapaca (UTA)
+  descr: "El proyecto de 10 mil millones de pesos permitirá generar las capacidades para el almacenamiento de grandes volúmenes de datos, utilizando tecnologías amigables con el medioambiente. "
   demo: https://example.com/
   tags:
     - tag: MongoDB
@@ -22,8 +22,8 @@
     - tag: AngularJS
     - tag: Node
 
-- name: project Y
-  descr: "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam"
+- name: Construcción de Corpus, Recopilación y Análisis de Datos
+  descr: "..."
   demo: https://example.com/
   tags:
     - tag: Python
