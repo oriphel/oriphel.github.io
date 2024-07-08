@@ -35,7 +35,8 @@ show_aboutme_card: true
 # about_me_title: The will be displayed as the title in the About Me section
 about_me_title: Nosotros
 # about_me_description: This will be displayed under the title.
-about_me_description: Los Grandes Modelos de Lenguaje (LLMs) han llegado para establecerse como solucionadores de problemas, abordando desde las cuestiones cotidianas hasta los desafíos empresariales más complejos, y extendiéndose incluso a áreas tan diversas como la investigación científica, los servicios estatales y mucho más. Esta tecnología está liderando una auténtica revolución tecnológica de la cual Latinoamérica no se puede quedar afuera. Esta iniciativa es una invitación a la comunidad de IA en Latinoamérica a unir fuerzas para desarrollar un primer gran modelo de lenguaje de código abierto que sea una semilla inicial para embarcar a nuestra región en esta revolución. If you like this theme and want to use it for yourself, checkout the source code and the documentation at <a class="highlight-link" href="https://github.com/longpdo/neumorphism" target="_blank" rel="noreferrer"> Github </a>. You can also find me on <a class="highlight-link" href="https://jamstackthemes.dev/theme/jekyll-neumorphism/" target="_blank" rel="noreferrer">JAMstack Themes</a> and on <a class="highlight-link" href="https://jekyll-themes.com/neumorphism/" target="_blank" rel="noreferrer">Jekyll Themes</a>.
+about_me_description: Los Grandes Modelos de Lenguaje (LLMs) han llegado para establecerse como solucionadores de problemas, abordando desde las cuestiones cotidianas hasta los desafíos empresariales más complejos, y extendiéndose incluso a áreas tan diversas como la investigación científica, los servicios estatales y mucho más. Esta tecnología está liderando una auténtica revolución tecnológica de la cual Latinoamérica no se puede quedar afuera. Esta iniciativa es una invitación a la comunidad de IA en Latinoamérica a unir fuerzas para desarrollar un primer gran modelo de lenguaje de código abierto que sea una semilla inicial para embarcar a nuestra región en esta revolución.
+#If you like this theme and want to use it for yourself, checkout the source code and the documentation at <a class="highlight-link" href="https://github.com/longpdo/neumorphism" target="_blank" rel="noreferrer"> Github </a>. You can also find me on <a class="highlight-link" href="https://jamstackthemes.dev/theme/jekyll-neumorphism/" target="_blank" rel="noreferrer">JAMstack Themes</a> and on <a class="highlight-link" href="https://jekyll-themes.com/neumorphism/" target="_blank" rel="noreferrer">Jekyll Themes</a>.
 
 # SKILLS SECTION
 # show_skills_card:
@@ -51,10 +52,10 @@ skills_title: ¿Quiénes Somos?
 # > setting this to false, will omit the Timeline section
 show_timeline_card: true
 # timeline_title: The will be displayed as the title in the Timeline section
-timeline_title: Education & Experience
+timeline_title: Cronograma del Proyecto
 # cv_download_link: The link where you host your cv.
 # > e.g. you share your cv on your dropbox, then add the dropbox link here
-cv_download_link: https://example.com/
+#cv_download_link: https://example.com/
 
 # PROJECTS SECTION
 # show_projects_card:
