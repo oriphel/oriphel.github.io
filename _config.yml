@@ -127,3 +127,5 @@ exclude:
     "node_modules",
     "package.json",
   ]
+sass:
+  sass_dir: _sass
