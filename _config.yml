@@ -43,7 +43,7 @@ about_me_description: Los Grandes Modelos de Lenguaje (LLMs) han llegado para es
 # > setting this to false, will omit the Skills section
 show_skills_card: true
 # about_me_title: The will be displayed as the title in the Skills section
-skills_title: Quienes Somos
+skills_title: ¿Quiénes Somos?
 
 # TIMELINE SECTION
 # show_timeline_card:
