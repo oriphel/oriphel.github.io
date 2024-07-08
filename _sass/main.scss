@@ -391,15 +391,15 @@ a {
     transition: opacity 0.5s;
   }
 
-  div[skill-type="Metas"] {
+  div[skill-type="metas"] {
     color: #e84a5f;
   }
 
-  div[skill-type="Alianzas"] {
+  div[skill-type="alianzas"] {
     color: #ff847c;
   }
 
-  div[skill-type="Líneas de Trabajo"] {
+  div[skill-type="lineas"] {
     color: #fecea8;
   }
 
@@ -732,18 +732,18 @@ a {
       @include neumorphism-button-pressed();
     }
 
-    input[id="language"]:checked ~ div[skill-type="framework"],
-    input[id="language"]:checked ~ div[skill-type="tool"] {
+    input[id="metas"]:checked ~ div[skill-type="alianzas"],
+    input[id="metas"]:checked ~ div[skill-type="lineas"] {
       @include filter-out;
     }
 
-    input[id="framework"]:checked ~ div[skill-type="language"],
-    input[id="framework"]:checked ~ div[skill-type="tool"] {
+    input[id="alianzas"]:checked ~ div[skill-type="metas"],
+    input[id="alianzas"]:checked ~ div[skill-type="lineas"] {
       @include filter-out;
     }
 
-    input[id="tool"]:checked ~ div[skill-type="language"],
-    input[id="tool"]:checked ~ div[skill-type="framework"] {
+    input[id="lineas"]:checked ~ div[skill-type="metas"],
+    input[id="lineas"]:checked ~ div[skill-type="alianzas"] {
       @include filter-out;
     }
   }
