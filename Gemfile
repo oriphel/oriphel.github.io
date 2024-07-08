@@ -5,6 +5,8 @@ group :jekyll_plugins do
     gem 'github-pages'
     gem 'jekyll'
     gem 'jekyll-github-metadata'
+    gem 'faraday-retry', '~> 2.2'
+    gem 'webrick'
 end
 
-gem "faraday-retry", "~> 2.2"
+
