@@ -2,41 +2,41 @@
 # > weight: Describes how good you know the language - values from 1 up to 5
 #
 # Example of a Language
-# - name: Language
+# - name: Inspiración
 #   weight: 5
 
-- name: TypeScript
+- name: Revolución Tecnológica
   weight: 5
 
-- name: JavaScript
+- name: LLM en Español
   weight: 4
 
-- name: Python
+- name: Diversidad Linguística
   weight: 2
 
-- name: HTML5
+- name: LLM Abierto
   weight: 4
 
-- name: CSS3
+- name: Alianzas
   weight: 3
 
-- name: SASS
+- name: Dialectos
   weight: 3
 
-- name: Java
+- name: Conocimiento Latinoamericano
   weight: 1
 
-- name: Dart
+- name: Innovación y Desarrollo
   weight: 1
 
-- name: Swift
+- name: Preservación cultural
   weight: 1
 
-- name: Kotlin
+- name: Soberanía Tecnológica
   weight: 1
 
-- name: C++
+- name: Necesidades locales
   weight: 2
 
-- name: Ruby
+- name: Colaboraciones LATAM
   weight: 2
