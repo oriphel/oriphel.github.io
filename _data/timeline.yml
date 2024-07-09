@@ -17,32 +17,36 @@
 #     - tag: Rails
 #   timeline-side: right
 
-- title: Entrenamiento 1 nodo
+- title: Construcción Corpus Latino
   title-url: https://example.com/
-  date: Mayo 2024 - Presente
-  subtitle: Equipo Desarrollo CENIA
-  #tags:
-  #  - tag: React
-  #  - tag: Javascript
-  #  - tag: Ruby
+  date: Enero 2024 - Presente
+  subtitle: Equipo Datos CENIA - Alianzas LATAM
+  tags:
+    - tag: Pipeline filtro datos
+    - tag: Alianzas 
+    - tag: Recopilación dirigida
   #  - tag: Rails
   timeline-side: right
 
-- title: Entrenamiento 2 nodos
+- title: Alineamiento
   title-url: https://example.com/
-  date: Junio 2024 - Presente
+  date: Julio 2024 - Presente
   subtitle: Equipo Desarrollo CENIA
-  #tags:
-  #  - tag: Flutter
-  #  - tag: Dart
-  #  - tag: Keycloak
+  tags:
+    - tag: DPO
+    - tag: Instruccional
+    - tag: Multiturno
   timeline-side: right
 
-- title: Entrenamiento 11 nodos
+- title: Evaluación
   title-url: https://example.com/
   date: Agosto 2024 - Diciembre 2024
   subtitle: Equipo Desarrollo CENIA
-  timeline-side: left
+  tags:
+    - tag: Benchmarks
+    - tag: Sesgo
+    - tag: Toxicidad
+  timeline-side: right
 
 - title: Pre-entrenamiento Final
   title-url: https://example.com/
@@ -52,7 +56,7 @@
     - tag: UTA
     - tag: H100
   #  - tag: Javascript
-  timeline-side: right
+  timeline-side: left
 
 #- title: Super University
 #  title-url: https://example.com/

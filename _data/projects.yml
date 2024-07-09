@@ -13,21 +13,52 @@
 #     - tag: AngularJS
 #     - tag: Node
 
-- name: Universidad de Tarapaca (UTA)
-  descr: "El proyecto de 10 mil millones de pesos permitirá generar las capacidades para el almacenamiento de grandes volúmenes de datos, utilizando tecnologías amigables con el medioambiente. "
+- name: Colabora con Nosotros
+  descr: "Actualmente tenemos 3 líneas de trabajo activas, donde puedes sumarte desde colaborar con datos latinoamericanos, construcción de benchmarks hasta colaborar con tu expertiz en el entrenamiento del modelo."
   demo: https://example.com/
   tags:
-    - tag: MongoDB
-    - tag: Express
-    - tag: AngularJS
-    - tag: Node
+    - tag: Datos
+    - tag: Alineamiento
+    - tag: Evaluación
 
-- name: Construcción de Corpus, Recopilación y Análisis de Datos
-  descr: "..."
+
+- name: Datos
+  descr: "Actualmente contamos con un Corpus de aproximadamente 7 T compuesto por datos curados y de la web."
   demo: https://example.com/
   tags:
-    - tag: Python
-    - tag: Django
+    - tag: Red Pajamas
+    - tag: Repo. Uchile
+    - tag: Conicet
+    - tag: Emol
+    - tag: Hemeroteca
+    - tag: mc4-es
+    - tag: INFOTEC
+    - tag: Universidad de las Andes (Colombia)
+    - tag: Bibliotecas UC
 
-- name: project Z
-  descr: "You can also set a project without demo link and no tags"
+
+- name: Redes de Contacto
+  descr: |
+    
+    - Universidades / Bibliotecas universitarias
+    - Institutos
+    - Bibliotecas públicas
+    - Departamentos Universitarios específicos (ej. Ingeniería, Computación, etc)
+    - Medios de prensa escrita
+    - Fundaciones
+    - Centros Públicos
+    - Personas naturales (Investigadores, tesistas, alumnos post/pregrado)
+  demo: https://example.com/
+  tags:
+   - tag: Súmate
+
+
+#- name: Universidad de Tarapaca (UTA)
+#  descr: "El proyecto de 10 mil millones de pesos permitirá generar las capacidades para el almacenamiento de grandes volúmenes de datos, utilizando tecnologías amigables con el medioambiente. "
+#  demo: https://example.com/
+#  tags:
+#    - tag: MongoDB
+#    - tag: Express
+#    - tag: AngularJS
+#    - tag: Node
+
