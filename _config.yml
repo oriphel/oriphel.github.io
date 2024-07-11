@@ -8,7 +8,7 @@ description: Iniciativa impulsada por CENIA
 # baseurl: The subpath of your site
 # > set this to "", if you renamed the repository to <user>.github.io
 url: https://drive.google.com/file/d/1l5AbYzY_U51ocCDWEg1X6PRt2YhPfui7/view?usp=sharing
-baseurl: /oriphel.github.io
+baseurl: "/oriphel.github.io"
 
 # LANDING PAGE
 # username: This will displayed on the landing page as your name.
