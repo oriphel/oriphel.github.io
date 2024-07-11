@@ -9,6 +9,9 @@
   <title>{{ site.title }}</title>
   <meta name="description" content="{{ site.description }}">
 
+  <!-- Logo -->
+  <link rel="icon" href="{{ "\assets\img\mascota_bandera.png" | prepend: site.baseurl }}">
+
   <link rel="apple-touch-icon" sizes="180x180" href="{{ "/assets/favicon/apple-touch-icon.png" | prepend: site.baseurl }}">
   <link rel="icon" type="image/png" sizes="32x32" href="{{ "/assets/favicon/favicon-32x32.png" | prepend: site.baseurl }}">
   <link rel="icon" type="image/png" sizes="16x16" href="{{ "/assets/favicon/favicon-16x16.png" | prepend: site.baseurl }}">
@@ -42,14 +45,14 @@
         {% include section-skills.html %}
       </section>
     {% endif %}
+    {%if site.show_projects_card %}
+    <section class="card neumorphism-card-big">
+      {% include section-projects.html %}
+    </section>
+  {% endif %}
     {%if site.show_timeline_card %}
       <section class="card neumorphism-card-big">
         {% include section-timeline.html %}
-      </section>
-    {% endif %}
-    {%if site.show_projects_card %}
-      <section class="card neumorphism-card-big">
-        {% include section-projects.html %}
       </section>
     {% endif %}
     {%if site.show_contact_card %}

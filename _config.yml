@@ -7,8 +7,8 @@ title: LLM Latino
 description: Iniciativa impulsada por CENIA
 # baseurl: The subpath of your site
 # > set this to "", if you renamed the repository to <user>.github.io
-url: https://oriphel.github.io/
-baseurl: 
+url: https://drive.google.com/file/d/1l5AbYzY_U51ocCDWEg1X6PRt2YhPfui7/view?usp=sharing
+baseurl: /oriphel.github.io
 
 # LANDING PAGE
 # username: This will displayed on the landing page as your name.
@@ -46,17 +46,6 @@ show_skills_card: true
 # about_me_title: The will be displayed as the title in the Skills section
 skills_title: ¿Quiénes Somos?
 
-# TIMELINE SECTION
-# show_timeline_card:
-# > setting this to true, will display the Timeline section
-# > setting this to false, will omit the Timeline section
-show_timeline_card: true
-# timeline_title: The will be displayed as the title in the Timeline section
-timeline_title: Cronograma del Proyecto
-# cv_download_link: The link where you host your cv.
-# > e.g. you share your cv on your dropbox, then add the dropbox link here
-#cv_download_link: https://example.com/
-
 # PROJECTS SECTION
 # show_projects_card:
 # > setting this to true, will display the Projects section
@@ -71,9 +60,20 @@ projects_title: Proyectos Open Source
 # show_os_projects:
 # > setting this to true, will display your public projects on github
 # > setting this to false, will omit your public projects on github
-show_os_projects: true
+show_os_projects: false
 # os_projects_title: The will be displayed as the title of your open source projects
 os_projects_title: Proyectos 
+
+# TIMELINE SECTION
+# show_timeline_card:
+# > setting this to true, will display the Timeline section
+# > setting this to false, will omit the Timeline section
+show_timeline_card: true
+# timeline_title: The will be displayed as the title in the Timeline section
+timeline_title: Cronograma del Proyecto
+# cv_download_link: The link where you host your cv.
+# > e.g. you share your cv on your dropbox, then add the dropbox link here
+#cv_download_link: https://example.com/
 
 # CONTACT SECTION
 # show_contact_card:
@@ -89,7 +89,7 @@ contact_description: Para más información contactarse con alexandra.garcia@cen
 # GITHUB-METADATA
 # Set this to your forked repository
 # > e.g. <user>/<user>.github.io
-repository: longpdo/neumorphism
+repository: CENIA-DEV/gpt-scrapers
 projects:
   # sortby:
   # > set this to pushed, if you want to sort your github repositories by time.
