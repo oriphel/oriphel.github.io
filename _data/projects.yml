@@ -15,7 +15,7 @@
 
 - name: Colabora con Nosotros
   descr: "Actualmente tenemos 3 líneas de trabajo activas, donde puedes sumarte desde colaborar con datos latinoamericanos, construcción de benchmarks hasta colaborar con tu expertiz en el entrenamiento del modelo."
-  demo: https://example.com/
+  demo: https://llm-latino.slack.com/
   tags:
     - tag: Datos
     - tag: Alineamiento
