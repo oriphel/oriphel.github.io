@@ -37,7 +37,7 @@
     - tag: Bibliotecas UC
 
 
-- name: Redes de Contacto
+- name: Casos de Éxito
   descr: |
     
     - Universidades / Bibliotecas universitarias
@@ -51,6 +51,26 @@
   demo: https://example.com/
   tags:
    - tag: Súmate
+
+
+- name: Alianzas 
+  descr: |
+    
+    - Bibliotecas UC (Chile)
+    - Biblioteca Nacional del Congreso (BCN, Chile)
+    - CRUCH (Chile)
+    - Universidad de los Andes (Colombia)
+    - INFOTEC (México)
+    - INAOE (México)
+    - Centro Geo (México)
+    - Universidad Nacional de Córdoba (UCN, Argentina)
+    - Fundación Vía Libre (Argentina)
+    - DatySoc (Uruguay)
+    - Omar Florez (Perú)
+    - Cristina Benalcazar (Ecuador)
+  demo: https://example.com/
+  tags:
+   - tag: Súmate   
 
 
 #- name: Universidad de Tarapaca (UTA)
