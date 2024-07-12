@@ -13,8 +13,8 @@ $font-family-numbers: "Josefin Sans", sans-serif;
 $font-size-base: 1rem !default;
 $font-size-h1: 2rem !default;
 $font-weight-strong: 600;
-$text-color: #0c0c0c !default;
-$bg-color: rgba(255, 255, 255, 1);
+$text-color: #fff !default;
+$bg-color: rgba(43, 45, 47, 1);
 $card-bg-color: linear-gradient(
   145deg,
   rgba(115, 115, 115, 0.15) 15%,
@@ -38,6 +38,21 @@ body {
   height: 100%;
 }
 
+.layout {
+  position: relative; /* Para asegurar que el contenido esté por encima del fondo */
+  z-index: 1;
+  padding: 20px; /* Espaciado */
+}
+
+section.card {
+  background: rgba(255, 255, 255, 0.8); /* Fondo blanco semitransparente */
+  padding: 20px; /* Espaciado interno */
+  border-radius: 8px; /* Bordes redondeados */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Sombra para neumorfismo */
+}
+
+
+
 /* Typography */
 
 h1 {
@@ -60,8 +75,8 @@ a {
 }
 
 .highlight-title {
-  color: $primary-color;
-  text-shadow: 0.25rem 0.25rem 0.25rem $primary-color;
+  color: $bg-color;
+  text-shadow: 0.25rem 0.25rem 0.25rem $bg-color;
 }
 
 .highlight-link {
@@ -77,6 +92,7 @@ a {
     color: $text-color;
   }
 }
+
 
 /* Layout */
 
@@ -145,8 +161,8 @@ a {
   height: 100%;
   justify-content: center;
   left: 0;
-  margin: 0.5rem;
-  padding: 0.5rem;
+  margin: 0;
+  padding: 0;
   position: absolute;
   right: 0;
   z-index: 999;
@@ -228,27 +244,43 @@ a {
 /* Landing Page */
 
 #landing {
-  background: $bg-color;
-  color: $text-color;
-  display: flex;
-  height: 100%;
-  margin: 0.5rem;
-  padding: 0.5rem;
-  text-align: center;
+  background: url('/assets/img/fig_back.png') no-repeat center top; /* Imagen de fondo */
+  background-size: 100% 83%; /* La imagen tendrá el 50% del ancho y altura */
+  z-index: -1; /* Envía el fondo detrás del contenido */
+  color: $bg-color;             // Color del texto
+  display: flex;                  // Habilita flexbox
+  flex-direction: column;         // Alinea elementos en columna
+  justify-content: center;        // Centra verticalmente
+  align-items: center;            // Centra horizontalmente
+  height: 100vh;                  // Altura del viewport
+  padding: 10px;                // Espacio interno
+  text-align: center;             // Centra el texto
+}
+
+#landing .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(135, 206, 250, 0.5); /* Color celeste con transparencia */
+  z-index: 0; /* Justo encima de la imagen de fondo */
 }
 
 .landing-title {
+
   left: 0;
-  margin: 0.5rem;
+  margin: 80px 0.5rem 0.5rem; // Aumenta el margin-top aquí
   padding: 0.5rem;
   position: absolute;
   right: 0;
-  top: 40%;
 }
 
 .landing-icons {
   display: flex;
   justify-content: center;
+  margin-top: 80px; // Ajusta este valor según necesites
+
 
   .social-link {
     color: $text-color;
@@ -378,6 +410,8 @@ a {
   }
 }
 
+
+
 /* Skills Section */
 
 #skills {
@@ -391,15 +425,15 @@ a {
     transition: opacity 0.5s;
   }
 
-  div[skill-type="metas"] {
+  div[skill-type="language"] {
     color: #e84a5f;
   }
 
-  div[skill-type="alianzas"] {
+  div[skill-type="framework"] {
     color: #ff847c;
   }
 
-  div[skill-type="lineas"] {
+  div[skill-type="tool"] {
     color: #fecea8;
   }
 
@@ -732,18 +766,18 @@ a {
       @include neumorphism-button-pressed();
     }
 
-    input[id="metas"]:checked ~ div[skill-type="alianzas"],
-    input[id="metas"]:checked ~ div[skill-type="lineas"] {
+    input[id="language"]:checked ~ div[skill-type="framework"],
+    input[id="language"]:checked ~ div[skill-type="tool"] {
       @include filter-out;
     }
 
-    input[id="alianzas"]:checked ~ div[skill-type="metas"],
-    input[id="alianzas"]:checked ~ div[skill-type="lineas"] {
+    input[id="framework"]:checked ~ div[skill-type="language"],
+    input[id="framework"]:checked ~ div[skill-type="tool"] {
       @include filter-out;
     }
 
-    input[id="lineas"]:checked ~ div[skill-type="metas"],
-    input[id="lineas"]:checked ~ div[skill-type="alianzas"] {
+    input[id="tool"]:checked ~ div[skill-type="language"],
+    input[id="tool"]:checked ~ div[skill-type="framework"] {
       @include filter-out;
     }
   }
