@@ -19,6 +19,7 @@
 
   <script src="{{ "/assets/js/vendors.min.js" | prepend: site.baseurl }}"></script>
   <script src="{{ "/assets/js/app.min.js" | prepend: site.baseurl }}"></script>
+
 </head>
 
 <body>
@@ -33,37 +34,76 @@
   {% include landing-page.html %}
   <div class="layout">
 
-    {%if site.show_skills_card %}
-    <section class="card neumorphism-card-big">
-      {% include section-skills.html %}
-    </section>
-    {% endif %}
+    <div class="tabs">
+      {% for tab in site.data.tabs %}
+        <div class="tab" onclick="openTab(event, '{{ tab.title | slugify }}')">{{ tab.title }}</div>
+      {% endfor %}
+    </div>
+    
+    {% for tab in site.data.tabs %}
+      <div id="{{ tab.title | slugify }}" class="tab-content">
+        {% if tab.title == 'Inicio' %}
+          {% include section-aboutme.html %}
+        {% elsif tab.title == 'Acerca de' %}
+          {% include section-skills.html %}
+        {% elsif tab.title == 'Contacto' %}
+          {% include section-contact.html %}
+        {% else %}
+          <h2>{{ tab.title }}</h2>
+          <p>{{ tab.content | markdownify }}</p>
+        {% endif %}
+      </div>
+    {% endfor %}   
+    
 
-    {%if site.show_aboutme_card %}
+
+    {% if site.show_tabs_card %}
       <section class="card neumorphism-card-big">
-        {% include section-aboutme.html %}
+        {% include section-tabs.html %}
       </section>
     {% endif %}
 
-   
-    {%if site.show_projects_card %}
+    {% if site.show_projects_card %}
       <section class="card neumorphism-card-big">
         {% include section-projects.html %}
       </section>
     {% endif %}
 
-    {%if site.show_timeline_card %}
-    <section class="card neumorphism-card-big">
-      {% include section-timeline.html %}
-    </section>
+    {% if site.show_timeline_card %}
+      <section class="card neumorphism-card-big">
+        {% include section-timeline.html %}
+      </section>
     {% endif %}
 
-    {%if site.show_contact_card %}
-    <section class="card neumorphism-card-big">
-      {% include section-contact.html %}
-    </section>
+    {% if site.show_contact_card %}
+      <section class="card neumorphism-card-big">
+        {% include section-contact.html %}
+      </section>
     {% endif %}
   </div>
   {% include footer.html %}
 </body>
+
+<script>
+  function openTab(evt, tabName) {
+    // Ocultar todos los elementos con la clase "tab-content"
+    var tabContents = document.getElementsByClassName("tab-content");
+    for (var i = 0; i < tabContents.length; i++) {
+      tabContents[i].style.display = "none";
+    }
+
+    // Eliminar la clase "active" de todos los elementos con la clase "tab"
+    var tabs = document.getElementsByClassName("tab");
+    for (var i = 0; i < tabs.length; i++) {
+      tabs[i].classList.remove("active");
+    }
+
+    // Mostrar el contenido de la pestaña seleccionada
+    document.getElementById(tabName).style.display = "block";
+
+    // Agregar la clase "active" a la pestaña seleccionada
+    evt.currentTarget.classList.add("active");
+  }
+</script>
+
 </html>

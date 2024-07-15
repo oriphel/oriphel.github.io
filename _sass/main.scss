@@ -13,14 +13,17 @@ $font-family-numbers: "Josefin Sans", sans-serif;
 $font-size-base: 1rem !default;
 $font-size-h1: 1.75rem !default;
 $font-weight-strong: 600;
-$text-color: #fdfbfb !default;
-$bg-color: rgba(43, 45, 47, 1);
+$text-color: #333;
+$bg-color: rgb(243, 215, 241);
 $card-bg-color: linear-gradient(
   145deg,
-  rgba(115, 115, 115, 0.15) 15%,
-  rgba(43, 45, 47, 1) 80%
+  rgba(229, 204, 255, 0.7) 15%, /* Morado pastel */
+  rgba(204, 153, 255, 0.7) 80% /* Morado más oscuro */
 );
-$primary-color: #ff073a;
+
+
+
+$primary-color: #f5187f;
 
 /* General */
 
@@ -42,9 +45,10 @@ body {
 /* Typography */
 
 h1 {
+  color: #333;
   font-size: $font-size-h1;
   font-weight: $font-weight-strong;
-  line-height: 2rem;
+  line-height: 3rem;
 }
 
 p {
@@ -61,7 +65,7 @@ a {
 }
 
 .highlight-title {
-  color: rgba(248, 171, 5, 0.836);
+  color: rgba(247, 51, 126, 0.836);
   text-shadow: 0.25rem 0.25rem 0.25rem $bg-color;
 }
 
@@ -108,35 +112,42 @@ a {
   text-align: justify;
 }
 
+/* Estilos para el botón neumórfico en tonalidades morado pastel más oscuro */
 .neumorphism-button {
   background: linear-gradient(
     145deg,
-    rgba(100, 100, 105, 0.15) 15%,
-    rgba(33, 33, 33, 0.4) 80%
+    rgba(153, 153, 204, 0.7) 15%, /* Morado pastel */
+    rgba(102, 102, 153, 0.7) 80% /* Morado más oscuro */
   );
-  box-shadow: -4px -3px 2px 0 rgba(250, 250, 250, 0.13),
-    4px 4px 2px 0 rgba(0, 0, 0, 0.4);
+  box-shadow: -4px -3px 2px 0 rgba(204, 204, 255, 0.7), /* Sombra clara */
+    4px 4px 2px 0 rgba(102, 102, 153, 0.7); /* Sombra más oscura */
 }
 
+/* Estilos para el botón neumórfico presionado en tonalidades morado pastel más oscuro */
 @mixin neumorphism-button-pressed {
   background: linear-gradient(
     150deg,
-    rgba(20, 20, 20, 0.4) 10%,
-    rgba(115, 115, 115, 0.15) 80%
+    rgba(102, 102, 153, 0.7) 10%, /* Morado más oscuro */
+    rgba(51, 51, 102, 0.7) 80% /* Morado pastel */
   );
-  box-shadow: 1px 1px 2px 0 rgba(210, 210, 210, 0.4),
-    -1px -1px 2px rgba(0, 0, 0, 0.4), inset 3px 3px 2px 0 rgba(0, 0, 0, 0.4),
-    inset -1px -2px 2px rgba(210, 210, 210, 0.4);
+  box-shadow: 1px 1px 2px 0 rgba(204, 204, 255, 0.7), /* Sombra clara */
+    -1px -1px 2px rgba(51, 51, 102, 0.7), /* Sombra más oscura */
+    inset 3px 3px 2px 0 rgba(204, 204, 255, 0.7), /* Sombra interna clara */
+    inset -1px -2px 2px rgba(51, 51, 102, 0.7); /* Sombra interna más oscura */
 }
 
+/* Estilos para la tarjeta neumórfica en tonalidades morado pastel más oscuro */
 .neumorphism-card {
-  box-shadow: inset 2px 2px 4px rgba(0, 0, 0, 1),
-    inset -2px -2px 4px rgba(99, 99, 99, 1);
+  box-shadow: inset 2px 2px 4px rgba(204, 204, 255, 1), /* Sombra interna clara */
+    inset -2px -2px 4px rgba(153, 153, 204, 1); /* Sombra interna más oscura */
 }
 
+/* Estilos para la tarjeta neumórfica grande en tonalidades morado pastel más oscuro */
 .neumorphism-card-big {
-  box-shadow: 5px 5px 4px #161718, -5px -5px 4px #404346;
+  box-shadow: 5px 5px 4px #b8b8d4, -5px -5px 4px #666699; /* Sombra externa */
 }
+
+
 
 /* Preloader */
 
@@ -230,21 +241,22 @@ a {
 /* Landing Page */
 
 #landing {
-  background: url('/assets/img/fig_back.png') no-repeat center top; /* Imagen de fondo */
+  /* Creación del degradado */
+  background: linear-gradient(rgba(241, 238, 245, 0.8), rgba(241, 238, 245, 0.5)), url('/assets/img/fig_back.png') no-repeat center top;
   background-size: cover; /* Asegúrate de cubrir el contenedor */
   background-position: 60% 50%;
   z-index: -1; /* Envía el fondo detrás del contenido */
-  color:  rgba(241, 238, 245, 0.8); /* Color del texto */
+  color: rgba(241, 238, 245, 0.8); /* Color del texto */
   display: flex; /* Habilita flexbox */
   flex-direction: column; /* Alinea elementos en columna */
   justify-content: center; /* Centra verticalmente */
   align-items: center; /* Centra horizontalmente */
-  height: 100%; /* Altura del viewport */
+  height: 100vh; /* Altura del viewport */
   padding: 10px; /* Espacio interno */
   text-align: center; /* Centra el texto */
-  border-radius: 50%; /* Esto crea la forma ovalada */
   overflow: hidden; /* Oculta cualquier contenido que se desborde */
 }
+
 
 #landing .overlay {
   position: absolute;
@@ -252,12 +264,11 @@ a {
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: rgba(71, 8, 172, 0.3); /* Color celeste con transparencia */
+  background-color: rgba(169, 123, 241, 0.3); /* Color celeste con transparencia */
   z-index: 0; /* Justo encima de la imagen de fondo */
-  animation: blob 8s infinite alternate;
-  border-radius: 50%; /* Hace que la mancha tenga bordes redondeados */
   filter: blur(8px); /* Ajusta el valor para el nivel de difuminado deseado */
 }
+
 
 .landing-icons {
   display: flex;
@@ -276,7 +287,7 @@ a {
 }
 
   .social-link {
-    color: $text-color;
+    color: rgb(23, 21, 27);
     position: relative;
     height: 3rem;
     line-height: 3rem;
@@ -288,6 +299,7 @@ a {
       fill: none;
       stroke-dasharray: 40;
       transition: all 0.2s ease-in-out;
+      color: rgb(23, 21, 27);
     }
 
     .social {
@@ -299,7 +311,7 @@ a {
     }
 
     .social-svg {
-      fill: rgb(243, 241, 247);
+      fill: rgb(23, 21, 27);
     }
 
     .label {
@@ -312,7 +324,7 @@ a {
       .circle {
         animation: outWaveIn 1s cubic-bezier(0.42, 0, 0.58, 1) forwards,
           colorBlackIcon 1s linear forwards;
-        fill: $text-color;
+        fill: #000;
         fill-opacity: 1;
       }
 
@@ -421,6 +433,131 @@ a {
   }
 
 
+/* Estilos para las pestañas */
+.tabs {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.tab {
+  padding: 10px 20px;
+  cursor: pointer;
+  background-color: $bg-color;
+  border: 1px solid $bg-color;
+  border-bottom: none;
+  border-radius: 5px 5px 0 0;
+  margin-right: 5px;
+  font-weight: bold;
+  user-select: none;
+}
+
+.tab.active {
+  background-color: $bg-color;
+  border-bottom: 1px solid $bg-color; /* Línea inferior blanca para la pestaña activa */
+}
+
+/* Estilos para el contenido de las pestañas */
+.tab-content {
+  display: none;
+  padding: 20px;
+  border: 1px solid $bg-color;
+  border-radius: 0 0 5px 5px;
+  background-color: $bg-color;
+}
+
+
+/* Estilos para la sección Tabs tonalidades rosa pastel y blanco */
+
+/* Estilos para la sección de pestañas */
+#tabs-section {
+  padding: 20px; /* Espacio interno */
+  background-color: #fff; /* Fondo blanco */
+  border-radius: 8px; /* Bordes redondeados */
+  box-shadow: 0 0 20px rgba(255, 192, 203, 0.3); /* Sombra rosa pastel */
+  margin-top: 20px; /* Margen superior */
+}
+
+#tabs-section h2 {
+  color: #f08080; /* Texto rosa pastel para el título */
+  font-size: 1.5em;
+  margin-bottom: 10px;
+}
+
+.tabs-content {
+  display: flex; /* Utiliza flexbox para alinear pestañas */
+}
+
+.tab {
+  flex: 1; /* Ocupa el espacio disponible */
+}
+
+.tab-content {
+  padding: 10px; /* Espacio interno */
+}
+
+/* Estilos para la tabla */
+.styled-table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: #f8e7e7; /* Fondo rosa pastel */
+  box-shadow: 0 0 20px rgba(255, 192, 203, 0.3); /* Sombra rosa pastel */
+  font-size: 16px;
+  border-radius: 8px; /* Bordes redondeados */
+  overflow: hidden; /* Asegura que los bordes redondeados se muestren correctamente */
+  border: none; /* Elimina cualquier borde exterior */
+  margin-top: 10px; /* Espacio superior */
+}
+
+.styled-table caption {
+  font-size: 1.5em;
+  margin-bottom: 10px;
+  color: #f08080; /* Texto rosa pastel */
+}
+
+.styled-table th,
+.styled-table td {
+  padding: 12px 15px;
+  text-align: left;
+  border: none;
+  color: #555; /* Texto gris */
+}
+
+.styled-table th {
+  background-color: #f08080; /* Fondo rosa pastel para encabezados */
+  color: #fff; /* Texto blanco */
+  font-weight: bold;
+}
+
+.styled-table tbody tr:nth-child(even) {
+  background-color: #ffe4e1; /* Fondo rosa pastel suave para filas pares */
+}
+
+.styled-table tbody tr:hover {
+  background-color: #f0cccc; /* Fondo rosa pastel más oscuro al pasar el cursor */
+}
+
+.styled-table tfoot {
+  font-weight: bold;
+}
+
+.styled-table tfoot td {
+  border-top: 2px solid #f08080; /* Borde rosa pastel para pie de tabla */
+  border-bottom: 1px solid #f08080; /* Borde rosa pastel para borde inferior de pie de tabla */
+}
+
+/* Estilos adicionales para asegurar bordes redondeados */
+.styled-table th:first-child,
+.styled-table td:first-child {
+  border-top-left-radius: 8px;
+  border-bottom-left-radius: 8px;
+}
+
+.styled-table th:last-child,
+.styled-table td:last-child {
+  border-top-right-radius: 8px;
+  border-bottom-right-radius: 8px;
+}
 
 
 /* Skills Section */
@@ -437,11 +574,11 @@ a {
   }
 
   div[skill-type="language"] {
-    color: #e84a5f;
+    color: #f1077c;
   }
 
   div[skill-type="framework"] {
-    color: #ff847c;
+    color: #dc73f1;
   }
 
   div[skill-type="tool"] {
@@ -669,7 +806,7 @@ a {
       animation: jump 1s infinite alternate;
 
       .social-svg {
-        fill: $text-color;
+        fill: #000;
       }
     }
   }

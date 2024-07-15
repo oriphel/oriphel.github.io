@@ -13,6 +13,8 @@
 #     - tag: AngularJS
 #     - tag: Node
 
+
+
 - name: Colabora con Nosotros
   descr: "Actualmente tenemos 3 líneas de trabajo activas, donde puedes sumarte desde colaborar con datos latinoamericanos, construcción de benchmarks hasta colaborar con tu expertiz en el entrenamiento del modelo."
   demo: https://llm-latino.slack.com/
@@ -20,22 +22,6 @@
     - tag: Datos
     - tag: Alineamiento
     - tag: Evaluación
-
-
-- name: Datos
-  descr: "Actualmente contamos con un Corpus de aproximadamente 7 T compuesto por datos curados y de la web."
-  demo: https://example.com/
-  tags:
-    - tag: Red Pajamas
-    - tag: Repo. Uchile
-    - tag: Conicet
-    - tag: Emol
-    - tag: Hemeroteca
-    - tag: mc4-es
-    - tag: INFOTEC
-    - tag: Universidad de las Andes (Colombia)
-    - tag: Bibliotecas UC
-
 
 - name: Casos de Éxito
   descr: |
@@ -51,7 +37,6 @@
   demo: https://example.com/
   tags:
    - tag: Súmate
-
 
 - name: Alianzas 
   descr: |
@@ -71,6 +56,9 @@
   demo: https://example.com/
   tags:
    - tag: Súmate   
+
+
+
 
 
 #- name: Universidad de Tarapaca (UTA)

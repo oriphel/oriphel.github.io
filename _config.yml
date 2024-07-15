@@ -46,6 +46,14 @@ show_skills_card: true
 # about_me_title: The will be displayed as the title in the Skills section
 skills_title: ¿Quiénes Somos?
 
+# TABS SECTION
+# show_tabs_card:
+# > setting this to true, will display the Tabs section
+# > setting this to false, will omit the Tabs section
+show_tabs_card: true
+# about_me_title: The will be displayed as the title in the Skills section
+tabs_title: Corpus LLM Latino
+
 # PROJECTS SECTION
 # show_projects_card:
 # > setting this to true, will display the Projects section
@@ -60,9 +68,9 @@ projects_title: Proyectos Open Source
 # show_os_projects:
 # > setting this to true, will display your public projects on github
 # > setting this to false, will omit your public projects on github
-show_os_projects: false
+#show_os_projects: false
 # os_projects_title: The will be displayed as the title of your open source projects
-os_projects_title: Proyectos 
+#os_projects_title: Proyectos 
 
 # TIMELINE SECTION
 # show_timeline_card:
