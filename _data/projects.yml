@@ -18,44 +18,20 @@
 - name: Colabora con Nosotros
   descr: "Actualmente tenemos 3 líneas de trabajo activas, donde puedes sumarte desde colaborar con datos latinoamericanos, construcción de benchmarks hasta colaborar con tu expertiz en el entrenamiento del modelo."
   demo: https://llm-latino.slack.com/
+  image: /assets/img/02.png   # Ruta relativa a la imagen
   tags:
     - tag: Datos
     - tag: Alineamiento
     - tag: Evaluación
 
 - name: Casos de Éxito
-  descr: |
-    
-    - Universidades / Bibliotecas universitarias
-    - Institutos
-    - Bibliotecas públicas
-    - Departamentos Universitarios específicos (ej. Ingeniería, Computación, etc)
-    - Medios de prensa escrita
-    - Fundaciones
-    - Centros Públicos
-    - Personas naturales (Investigadores, tesistas, alumnos post/pregrado)
+  descr:
   demo: https://example.com/
+  image: /assets/img/01.png   # Ruta relativa a la imagen
   tags:
    - tag: Súmate
 
-- name: Alianzas 
-  descr: |
-    
-    - Bibliotecas UC (Chile)
-    - Biblioteca Nacional del Congreso (BCN, Chile)
-    - CRUCH (Chile)
-    - Universidad de los Andes (Colombia)
-    - INFOTEC (México)
-    - INAOE (México)
-    - Centro Geo (México)
-    - Universidad Nacional de Córdoba (UCN, Argentina)
-    - Fundación Vía Libre (Argentina)
-    - DatySoc (Uruguay)
-    - Omar Florez (Perú)
-    - Cristina Benalcazar (Ecuador)
-  demo: https://example.com/
-  tags:
-   - tag: Súmate   
+
 
 
 
