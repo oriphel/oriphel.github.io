@@ -14,12 +14,16 @@ $font-size-base: 1rem !default;
 $font-size-h1: 1.75rem !default;
 $font-weight-strong: 600;
 $text-color: #333;
-$bg-color: rgb(243, 215, 241);
+$bg-color: rgb(182, 218, 247);
 $card-bg-color: linear-gradient(
   145deg,
-  rgba(229, 204, 255, 0.7) 15%, /* Morado pastel */
-  rgba(204, 153, 255, 0.7) 80% /* Morado más oscuro */
+  rgba(255, 255, 255, 0.4) 0%, /* Blanco con 40% de opacidad */
+  rgba(255, 255, 255, 0.8) 100% /* Blanco con 80% de opacidad */
 );
+
+
+
+
 
 
 
@@ -93,19 +97,24 @@ a {
 }
 
 .layout .card {
-  background: $card-bg-color;
+  background: $card-bg-color; /* Usar el gradiente lineal como fondo */
   border-radius: 2rem;
   margin: 3rem 0;
   padding: 1rem 2rem;
+  border: none; /* Eliminar el borde para un estilo más limpio */
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2); /* Sombra más difuminada y suave */
+  backdrop-filter: blur(10px); /* Aplicar un desenfoque de fondo */
 }
 
+
+
 .layout .card .title {
-  text-align: center;
+  text-align: left;
   position: relative;
 }
 
 .layout .card .subtitle {
-  text-align: center;
+  text-align: left;
 }
 
 .layout .card .description {
@@ -255,6 +264,7 @@ a {
   padding: 10px; /* Espacio interno */
   text-align: center; /* Centra el texto */
   overflow: hidden; /* Oculta cualquier contenido que se desborde */
+  position: relative;
 }
 
 
@@ -271,10 +281,14 @@ a {
 
 
 .landing-icons {
+  position: absolute; /* Ajusta la posición absoluta para mover los iconos */
+  top: 10px; /* Ajusta la distancia desde la parte superior */
+  right: 10px; /* Ajusta la distancia desde la derecha */
   display: flex;
-  flex-direction: row; /* Asegura que los iconos estén en fila */
-  justify-content: center; /* Centra los iconos horizontalmente */
+  flex-direction: row;
   margin-top: 3rem; /* Ajusta según necesites */
+  justify-content: center; /* Centra los iconos horizontalmente */
+  
 }
 
 .landing-title {
@@ -329,7 +343,7 @@ a {
       }
 
       .social-svg {
-        fill: #000;
+        fill: $primary-color;
       }
 
       .label {
@@ -346,7 +360,7 @@ a {
         colorEmail 1s linear forwards;
     }
     .social-svg {
-      fill: #d44638;
+      fill: $primary-color;
     }
   }
 
@@ -356,7 +370,7 @@ a {
         colorLinkedin 1s linear forwards;
     }
     .social-svg {
-      fill: #007bb6;
+      fill: $primary-color;
     }
   }
 
@@ -366,14 +380,7 @@ a {
         colorTwitter 1s linear forwards;
     }
     .social-svg {
-      fill: #1da1f2;
-    }
-  }
-
-  @keyframes outWaveIn {
-    to {
-      stroke-dasharray: 510;
-      stroke-width: 0.5rem;
+      fill: $primary-color;
     }
   }
 
@@ -433,56 +440,72 @@ a {
   }
 
 
-//* Estilos para las pestañas */
+
+/* Estilos para las pestañas */
+
 .tabs {
-  display: flex; /* Mostrar las pestañas en línea */
-  justify-content: center; /* Centrar las pestañas horizontalmente */
-  list-style-type: none; /* Quitar el marcador de lista */
-  padding: 0;
-  margin: 0;
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  list-style-type: none;
+  padding: 10px 50px;
+  background-color: transparent; /* Color de fondo de las pestañas con transparencia */
+  position: absolute;
+  top: 0px; /* Ajusta la posición desde arriba según el diseño */
+  left: 0;
+  right: 0;
+  z-index: 100; /* Asegura que las pestañas estén por encima del landing-page */
+  backdrop-filter: blur(10px); /* Efecto de desenfoque en el fondo */
 }
 
 .tab {
-  padding: 10px 20px; /* Espacio interno de las pestañas */
+  padding: 10px 20px;
   cursor: pointer;
-  background-color: $bg-color; /* Fondo personalizado */
-  border: 1px solid $bg-color; /* Borde del mismo color */
-  border-bottom: none; /* Sin borde inferior para permitir la superposición */
+  background-color: transparent; /* Color de fondo de las pestañas con transparencia */
+  border: 1px solid rgba(200, 200, 200, 0.8); /* Borde de las pestañas */
+  border-bottom: none; /* Sin borde inferior para superponer contenido */
   border-radius: 5px 5px 0 0; /* Bordes redondeados en la parte superior */
-  margin-right: 5px;
+  margin-right: 5px; /* Espacio entre pestañas */
   font-weight: bold;
-  color: #333; /* Texto negro */
+  color: #333; /* Color del texto */
   user-select: none;
 }
 
 .tab:hover {
-  color: $primary-color; /* Cambiar aquí al color deseado para el texto */
+  background-color: rgba(220, 220, 220, 0.8); /* Color de fondo al pasar el cursor con transparencia */
 }
-
 
 .tab.active {
-  background-color: $bg-color; /* Fondo personalizado para la pestaña activa */
-  border-bottom: 1px solid $bg-color; /* Línea inferior del mismo color */
-  color: #333; /* Texto negro */
+  background-color: #fff; /* Color de fondo de la pestaña activa */
+  border-bottom: 1px solid #fff; /* Borde inferior de la pestaña activa */
+  color: #333; /* Color del texto */
 }
 
-/* Estilos para el contenido de las pestañas */
 .tab-content {
-  display: none; /* Inicialmente oculto */
-  padding: 20px; /* Espacio interno */
-  border: 1px solid $bg-color; /* Borde del mismo color */
-  border-top: none; /* Sin borde superior para permitir la superposición */
-  border-radius: 0 0 5px 5px; /* Bordes redondeados en la parte inferior */
-  background-color: $bg-color; /* Fondo blanco */
+  display: none;
+  position: absolute;
+  top: 60px; /* Ajusta la posición desde arriba según el diseño */
+  left: 50%; /* Centra horizontalmente */
+  transform: translateX(-50%); /* Centra horizontalmente */
+  width: 80%; /* Ancho del contenido */
+  max-width: 1200px; /* Ancho máximo del contenido */
+  padding: 20px; /* Espacio interno del contenido */
+  background-color: rgba(255, 255, 255, 0.9); /* Fondo con transparencia */
+  border-radius: 10px; /* Bordes redondeados */
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1); /* Sombra difuminada */
+  border: 1px solid rgba(0, 0, 0, 0.1); /* Borde con transparencia */
+  z-index: 50; /* Asegura que el contenido esté detrás de las pestañas */
 }
+
+
 
 
 /* Estilos para la tabla */
 .styled-table {
   width: 100%;
   border-collapse: collapse;
-  background-color: #f8e7e7; /* Fondo rosa pastel */
-  box-shadow: 0 0 20px rgba(255, 192, 203, 0.3); /* Sombra rosa pastel */
+  background-color: #e3f2fd; /* Fondo azul celeste pastel */
+  box-shadow: 0 0 20px rgba(144, 202, 249, 0.3); /* Sombra azul celeste pastel */
   font-size: 16px;
   border-radius: 8px; /* Bordes redondeados */
   overflow: hidden; /* Asegura que los bordes redondeados se muestren correctamente */
@@ -493,7 +516,7 @@ a {
 .styled-table caption {
   font-size: 1.5em;
   margin-bottom: 10px;
-  color: #f08080; /* Texto rosa pastel */
+  color: #90caf9; /* Texto azul celeste pastel */
 }
 
 .styled-table th,
@@ -505,17 +528,17 @@ a {
 }
 
 .styled-table th {
-  background-color: #f08080; /* Fondo rosa pastel para encabezados */
+  background-color: #42a5f5; /* Fondo azul celeste pastel para encabezados */
   color: #fff; /* Texto blanco */
   font-weight: bold;
 }
 
 .styled-table tbody tr:nth-child(even) {
-  background-color: #ffe4e1; /* Fondo rosa pastel suave para filas pares */
+  background-color: #bbdefb; /* Fondo azul celeste pastel suave para filas pares */
 }
 
 .styled-table tbody tr:hover {
-  background-color: #f0cccc; /* Fondo rosa pastel más oscuro al pasar el cursor */
+  background-color: #90caf9; /* Fondo azul celeste pastel más oscuro al pasar el cursor */
 }
 
 .styled-table tfoot {
@@ -523,8 +546,8 @@ a {
 }
 
 .styled-table tfoot td {
-  border-top: 2px solid #f08080; /* Borde rosa pastel para pie de tabla */
-  border-bottom: 1px solid #f08080; /* Borde rosa pastel para borde inferior de pie de tabla */
+  border-top: 2px solid #42a5f5; /* Borde azul celeste pastel para pie de tabla */
+  border-bottom: 1px solid #42a5f5; /* Borde azul celeste pastel para borde inferior de pie de tabla */
 }
 
 /* Estilos adicionales para asegurar bordes redondeados */
@@ -767,6 +790,16 @@ a {
   margin-bottom: 0.25rem;
   padding: 0.5rem;
 }
+
+
+
+.project-image {
+  width: 520px; /* Ajusta el ancho de la imagen según sea necesario */
+  height: auto; /* Permite que la altura se ajuste automáticamente para mantener la proporción */
+  display: block; /* Asegura que la imagen sea un bloque para manejar mejor el espacio */
+  margin: 0 auto; /* Centra la imagen horizontalmente dentro del contenedor */
+}
+
 
 /* Contact Card */
 

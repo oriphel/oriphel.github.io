@@ -12,12 +12,14 @@
   <link rel="icon" type="image/png" sizes="32x32" href="{{ "/assets/favicon/favicon-32x32.png" | prepend: site.baseurl }}">
   <link rel="icon" type="image/png" sizes="16x16" href="{{ "/assets/favicon/favicon-16x16.png" | prepend: site.baseurl }}">
   <link rel="manifest" href="{{ "/assets/favicon/site.webmanifest" | prepend: site.baseurl }}">
-  
+
   <!-- Incluir tus estilos y scripts -->
   <link rel="stylesheet" href="{{ "/assets/css/main.min.css" | prepend: site.baseurl }}">
   <link rel="stylesheet" href="{{ "/assets/css/vendors.min.css" | prepend: site.baseurl }}">
   <script src="{{ "/assets/js/vendors.min.js" | prepend: site.baseurl }}"></script>
   <script src="{{ "/assets/js/app.min.js" | prepend: site.baseurl }}"></script>
+
+
 </head>
 <body>
   <!-- Contenido principal -->
@@ -30,17 +32,17 @@
     </div>
   </div>
 
+  <!-- Contenedor de pestañas -->
+  <div class="tabs">
+    {% for tab in site.data.tabs %}
+      <div class="tab" onclick="openTab(event, '{{ tab.title | slugify }}')">{{ tab.title }}</div>
+    {% endfor %}
+  </div>
+
   <!-- Incluir el contenido del landing-page -->
   {% include landing-page.html %}
 
   <div class="layout">
-    <!-- Contenedor de pestañas -->
-    <div class="tabs">
-      {% for tab in site.data.tabs %}
-        <div class="tab" onclick="openTab(event, '{{ tab.title | slugify }}')">{{ tab.title }}</div>
-      {% endfor %}
-    </div>
-
     <!-- Contenido de las pestañas -->
     {% for tab in site.data.tabs %}
       <div id="{{ tab.title | slugify }}" class="tab-content">
@@ -50,6 +52,23 @@
           {% include section-skills.html %}
         {% elsif tab.title == 'Contacto' %}
           {% include section-contact.html %}
+        {% elsif tab.title == 'Alianzas' %}
+          <h2>{{ tab.name }}</h2>
+          <ul>
+            {% for item in tab.descr %}
+              <li>{{ item }}</li>
+            {% endfor %}
+          </ul>
+          {% if tab.demo %}
+            <a href="{{ tab.demo }}" class="highlight-link" target="_blank" rel="noreferrer">Link</a>
+          {% endif %}
+          {% if tab.tags %}
+            <div class="tag-wrapper">
+              {% for tag in tab.tags %}
+                <span class="tag neumorphism-card">{{ tag.tag }}</span>
+              {% endfor %}
+            </div>
+          {% endif %}
         {% else %}
           <h2>{{ tab.title }}</h2>
           <p>{{ tab.content | markdownify }}</p>
@@ -58,15 +77,15 @@
     {% endfor %}
 
     <!-- Secciones adicionales según tu diseño -->
-    {% if site.show_corpus_card %}
-      <section class="card neumorphism-card-big">
-        {% include section-corpus.html %}
-      </section>
-    {% endif %}
-
     {% if site.show_projects_card %}
       <section class="card neumorphism-card-big">
         {% include section-projects.html %}
+      </section>
+    {% endif %}
+
+    {% if site.show_corpus_card %}
+      <section class="card neumorphism-card-big">
+        {% include section-corpus.html %}
       </section>
     {% endif %}
 
@@ -129,6 +148,5 @@
       }
     });
   </script>
-
 </body>
 </html>
