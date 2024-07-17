@@ -1,28 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-
   <title>{{ site.title }}</title>
   <meta name="description" content="{{ site.description }}">
 
+  
   <link rel="apple-touch-icon" sizes="180x180" href="{{ "/assets/favicon/apple-touch-icon.png" | prepend: site.baseurl }}">
   <link rel="icon" type="image/png" sizes="32x32" href="{{ "/assets/favicon/favicon-32x32.png" | prepend: site.baseurl }}">
   <link rel="icon" type="image/png" sizes="16x16" href="{{ "/assets/favicon/favicon-16x16.png" | prepend: site.baseurl }}">
   <link rel="manifest" href="{{ "/assets/favicon/site.webmanifest" | prepend: site.baseurl }}">
-
+  
+  <!-- Incluir tus estilos y scripts -->
   <link rel="stylesheet" href="{{ "/assets/css/main.min.css" | prepend: site.baseurl }}">
   <link rel="stylesheet" href="{{ "/assets/css/vendors.min.css" | prepend: site.baseurl }}">
-
   <script src="{{ "/assets/js/vendors.min.js" | prepend: site.baseurl }}"></script>
   <script src="{{ "/assets/js/app.min.js" | prepend: site.baseurl }}"></script>
-
 </head>
-
 <body>
+  <!-- Contenido principal -->
   <div id="preloader">
     <div class="load">
       <hr />
@@ -31,15 +29,19 @@
       <hr />
     </div>
   </div>
-  {% include landing-page.html %}
-  <div class="layout">
 
+  <!-- Incluir el contenido del landing-page -->
+  {% include landing-page.html %}
+
+  <div class="layout">
+    <!-- Contenedor de pestañas -->
     <div class="tabs">
       {% for tab in site.data.tabs %}
         <div class="tab" onclick="openTab(event, '{{ tab.title | slugify }}')">{{ tab.title }}</div>
       {% endfor %}
     </div>
-    
+
+    <!-- Contenido de las pestañas -->
     {% for tab in site.data.tabs %}
       <div id="{{ tab.title | slugify }}" class="tab-content">
         {% if tab.title == 'Inicio' %}
@@ -53,13 +55,12 @@
           <p>{{ tab.content | markdownify }}</p>
         {% endif %}
       </div>
-    {% endfor %}   
-    
+    {% endfor %}
 
-
-    {% if site.show_tabs_card %}
+    <!-- Secciones adicionales según tu diseño -->
+    {% if site.show_corpus_card %}
       <section class="card neumorphism-card-big">
-        {% include section-tabs.html %}
+        {% include section-corpus.html %}
       </section>
     {% endif %}
 
@@ -81,29 +82,53 @@
       </section>
     {% endif %}
   </div>
+
+  <!-- Incluir el footer -->
   {% include footer.html %}
+
+  <!-- Script para la funcionalidad de pestañas -->
+  <script>
+    // Función para abrir una pestaña
+    function openTab(evt, tabName) {
+      console.log("Clic en pestaña:", tabName);
+      
+      // Ocultar todos los elementos con la clase "tab-content"
+      var tabContents = document.getElementsByClassName("tab-content");
+      for (var i = 0; i < tabContents.length; i++) {
+        tabContents[i].style.display = "none";
+      }
+  
+      // Eliminar la clase "active" de todos los elementos con la clase "tab"
+      var tabs = document.getElementsByClassName("tab");
+      for (var i = 0; i < tabs.length; i++) {
+        tabs[i].classList.remove("active");
+      }
+  
+      // Mostrar el contenido de la pestaña seleccionada
+      document.getElementById(tabName).style.display = "block";
+  
+      // Agregar la clase "active" a la pestaña seleccionada
+      evt.currentTarget.classList.add("active");
+    }
+  
+    // Evento de clic en el documento para cerrar las pestañas si se hace clic fuera de ellas
+    document.addEventListener("click", function(event) {
+      var tabsContainer = document.querySelector(".tabs");
+      if (!tabsContainer.contains(event.target)) {
+        // Si el clic no está dentro del contenedor de pestañas, cerrar todas las pestañas
+        var tabContents = document.getElementsByClassName("tab-content");
+        for (var i = 0; i < tabContents.length; i++) {
+          tabContents[i].style.display = "none";
+        }
+  
+        // Eliminar la clase "active" de todos los elementos con la clase "tab"
+        var tabs = document.getElementsByClassName("tab");
+        for (var i = 0; i < tabs.length; i++) {
+          tabs[i].classList.remove("active");
+        }
+      }
+    });
+  </script>
+
 </body>
-
-<script>
-  function openTab(evt, tabName) {
-    // Ocultar todos los elementos con la clase "tab-content"
-    var tabContents = document.getElementsByClassName("tab-content");
-    for (var i = 0; i < tabContents.length; i++) {
-      tabContents[i].style.display = "none";
-    }
-
-    // Eliminar la clase "active" de todos los elementos con la clase "tab"
-    var tabs = document.getElementsByClassName("tab");
-    for (var i = 0; i < tabs.length; i++) {
-      tabs[i].classList.remove("active");
-    }
-
-    // Mostrar el contenido de la pestaña seleccionada
-    document.getElementById(tabName).style.display = "block";
-
-    // Agregar la clase "active" a la pestaña seleccionada
-    evt.currentTarget.classList.add("active");
-  }
-</script>
-
 </html>

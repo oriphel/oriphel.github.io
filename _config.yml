@@ -46,13 +46,13 @@ show_skills_card: true
 # about_me_title: The will be displayed as the title in the Skills section
 skills_title: ¿Quiénes Somos?
 
-# TABS SECTION
+# CORPUS SECTION
 # show_tabs_card:
 # > setting this to true, will display the Tabs section
 # > setting this to false, will omit the Tabs section
-show_tabs_card: true
+show_corpus_card: true
 # about_me_title: The will be displayed as the title in the Skills section
-tabs_title: Corpus LLM Latino
+corpus_title: Corpus LLM Latino
 
 # PROJECTS SECTION
 # show_projects_card:

@@ -433,68 +433,49 @@ a {
   }
 
 
-/* Estilos para las pestañas */
+//* Estilos para las pestañas */
 .tabs {
-  display: flex;
-  justify-content: center;
-  margin-bottom: 20px;
+  display: flex; /* Mostrar las pestañas en línea */
+  justify-content: center; /* Centrar las pestañas horizontalmente */
+  list-style-type: none; /* Quitar el marcador de lista */
+  padding: 0;
+  margin: 0;
 }
 
 .tab {
-  padding: 10px 20px;
+  padding: 10px 20px; /* Espacio interno de las pestañas */
   cursor: pointer;
-  background-color: $bg-color;
-  border: 1px solid $bg-color;
-  border-bottom: none;
-  border-radius: 5px 5px 0 0;
+  background-color: $bg-color; /* Fondo personalizado */
+  border: 1px solid $bg-color; /* Borde del mismo color */
+  border-bottom: none; /* Sin borde inferior para permitir la superposición */
+  border-radius: 5px 5px 0 0; /* Bordes redondeados en la parte superior */
   margin-right: 5px;
   font-weight: bold;
+  color: #333; /* Texto negro */
   user-select: none;
 }
 
+.tab:hover {
+  color: #b10076; /* Cambiar aquí al color deseado para el texto */
+}
+
+
 .tab.active {
-  background-color: $bg-color;
-  border-bottom: 1px solid $bg-color; /* Línea inferior blanca para la pestaña activa */
+  background-color: $bg-color; /* Fondo personalizado para la pestaña activa */
+  border-bottom: 1px solid $bg-color; /* Línea inferior del mismo color */
+  color: #333; /* Texto negro */
 }
 
 /* Estilos para el contenido de las pestañas */
 .tab-content {
-  display: none;
-  padding: 20px;
-  border: 1px solid $bg-color;
-  border-radius: 0 0 5px 5px;
-  background-color: $bg-color;
-}
-
-
-/* Estilos para la sección Tabs tonalidades rosa pastel y blanco */
-
-/* Estilos para la sección de pestañas */
-#tabs-section {
+  display: none; /* Inicialmente oculto */
   padding: 20px; /* Espacio interno */
-  background-color: #fff; /* Fondo blanco */
-  border-radius: 8px; /* Bordes redondeados */
-  box-shadow: 0 0 20px rgba(255, 192, 203, 0.3); /* Sombra rosa pastel */
-  margin-top: 20px; /* Margen superior */
+  border: 1px solid $bg-color; /* Borde del mismo color */
+  border-top: none; /* Sin borde superior para permitir la superposición */
+  border-radius: 0 0 5px 5px; /* Bordes redondeados en la parte inferior */
+  background-color: $bg-color; /* Fondo blanco */
 }
 
-#tabs-section h2 {
-  color: #f08080; /* Texto rosa pastel para el título */
-  font-size: 1.5em;
-  margin-bottom: 10px;
-}
-
-.tabs-content {
-  display: flex; /* Utiliza flexbox para alinear pestañas */
-}
-
-.tab {
-  flex: 1; /* Ocupa el espacio disponible */
-}
-
-.tab-content {
-  padding: 10px; /* Espacio interno */
-}
 
 /* Estilos para la tabla */
 .styled-table {
@@ -557,6 +538,14 @@ a {
 .styled-table td:last-child {
   border-top-right-radius: 8px;
   border-bottom-right-radius: 8px;
+}
+
+/* Estilos para la sección corpus-section */
+
+
+.corpus-section h3 {
+  font-size: 1.5rem; /* Tamaño de fuente para el título */
+  margin-bottom: 10px; /* Espacio inferior del título */
 }
 
 

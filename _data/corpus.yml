@@ -1,0 +1,2 @@
+show_corpus_card: true  # Para mostrar la sección de pestañas
+corpus_title: "Corpus LLM Latino"
