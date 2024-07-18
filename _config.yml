@@ -46,6 +46,8 @@ show_skills_card: true
 # about_me_title: The will be displayed as the title in the Skills section
 skills_title: ¿Quiénes Somos?
 
+
+
 # CORPUS SECTION
 # show_tabs_card:
 # > setting this to true, will display the Tabs section

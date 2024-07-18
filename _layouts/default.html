@@ -53,7 +53,7 @@
         {% elsif tab.title == 'Contacto' %}
           {% include section-contact.html %}
         {% elsif tab.title == 'Alianzas' %}
-          <h2>{{ tab.name }}</h2>
+          <h1>{{ tab.title }}</h1>
           <ul>
             {% for item in tab.descr %}
               <li>{{ item }}</li>
@@ -69,9 +69,7 @@
               {% endfor %}
             </div>
           {% endif %}
-        {% else %}
-          <h2>{{ tab.title }}</h2>
-          <p>{{ tab.content | markdownify }}</p>
+        
         {% endif %}
       </div>
     {% endfor %}

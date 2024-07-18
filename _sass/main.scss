@@ -23,10 +23,6 @@ $card-bg-color: linear-gradient(
 
 
 
-
-
-
-
 $primary-color: #f5187f;
 
 /* General */
@@ -49,7 +45,7 @@ body {
 /* Typography */
 
 h1 {
-  color: #333;
+  color: #f8f5f5;
   font-size: $font-size-h1;
   font-weight: $font-weight-strong;
   line-height: 3rem;
@@ -98,12 +94,12 @@ a {
 
 .layout .card {
   background: $card-bg-color; /* Usar el gradiente lineal como fondo */
-  border-radius: 2rem;
   margin: 3rem 0;
+  border-radius: 0.5rem;
   padding: 1rem 2rem;
   border: none; /* Eliminar el borde para un estilo más limpio */
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.2); /* Sombra más difuminada y suave */
-  backdrop-filter: blur(10px); /* Aplicar un desenfoque de fondo */
+  backdrop-filter: blur(20px); /* Aplicar un desenfoque de fondo */
 }
 
 
@@ -111,6 +107,9 @@ a {
 .layout .card .title {
   text-align: left;
   position: relative;
+  color: #333;
+
+  
 }
 
 .layout .card .subtitle {
@@ -125,12 +124,32 @@ a {
 .neumorphism-button {
   background: linear-gradient(
     145deg,
-    rgba(153, 153, 204, 0.7) 15%, /* Morado pastel */
-    rgba(102, 102, 153, 0.7) 80% /* Morado más oscuro */
+    rgba(0, 0, 0, 0.7) 15%, /* Negro */
+    rgba(34, 34, 34, 0.7) 80% /* Negro más oscuro */
   );
-  box-shadow: -4px -3px 2px 0 rgba(204, 204, 255, 0.7), /* Sombra clara */
-    4px 4px 2px 0 rgba(102, 102, 153, 0.7); /* Sombra más oscura */
+  box-shadow: -4px -3px 2px 0 rgba(34, 34, 34, 0.7), /* Sombra oscura */
+              4px 4px 2px 0 rgba(0, 0, 0, 0.7); /* Sombra más clara */
 }
+
+/* Cuadrados que internos de las cards */
+.neumorphism-card {
+  box-shadow: inset 2px 2px 4px rgba(204, 204, 255, 1), /* Sombra interna clara */
+    inset -2px -2px 4px rgba(153, 153, 204, 1); /* Sombra interna más oscura */
+}
+
+
+
+
+
+
+/* Estilos para la tarjeta neumórfica grande en tonalidades morado pastel más oscuro */
+.neumorphism-card-big {
+  background-color: #000000; /* Fondo negro */
+  box-shadow: 
+    5px 5px 4px rgba(0, 0, 0, 0.7),   /* Sombra externa más clara */
+    -5px -5px 4px rgba(51, 51, 51, 0.7); /* Sombra externa más oscura */
+}
+
 
 /* Estilos para el botón neumórfico presionado en tonalidades morado pastel más oscuro */
 @mixin neumorphism-button-pressed {
@@ -144,18 +163,6 @@ a {
     inset 3px 3px 2px 0 rgba(204, 204, 255, 0.7), /* Sombra interna clara */
     inset -1px -2px 2px rgba(51, 51, 102, 0.7); /* Sombra interna más oscura */
 }
-
-/* Estilos para la tarjeta neumórfica en tonalidades morado pastel más oscuro */
-.neumorphism-card {
-  box-shadow: inset 2px 2px 4px rgba(204, 204, 255, 1), /* Sombra interna clara */
-    inset -2px -2px 4px rgba(153, 153, 204, 1); /* Sombra interna más oscura */
-}
-
-/* Estilos para la tarjeta neumórfica grande en tonalidades morado pastel más oscuro */
-.neumorphism-card-big {
-  box-shadow: 5px 5px 4px #b8b8d4, -5px -5px 4px #666699; /* Sombra externa */
-}
-
 
 
 /* Preloader */
@@ -274,9 +281,9 @@ a {
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: rgba(169, 123, 241, 0.3); /* Color celeste con transparencia */
+  background-color: rgba(169, 123, 241, 0.3);  /* Color celeste con transparencia */
   z-index: 0; /* Justo encima de la imagen de fondo */
-  filter: blur(8px); /* Ajusta el valor para el nivel de difuminado deseado */
+  filter: blur(10px); /* Ajusta el valor para el nivel de difuminado deseado */
 }
 
 
@@ -298,7 +305,9 @@ a {
   position: absolute;
   right: 0;
   top: 30%;
+  
 }
+
 
   .social-link {
     color: rgb(23, 21, 27);
@@ -471,14 +480,18 @@ a {
   user-select: none;
 }
 
+.tab.title {
+  color: #fcf6f6; /* Color del texto */  
+}
+
 .tab:hover {
-  background-color: rgba(220, 220, 220, 0.8); /* Color de fondo al pasar el cursor con transparencia */
+  background-color: rgba(220, 220, 220, 0.6); /* Color de fondo al pasar el cursor con transparencia */
 }
 
 .tab.active {
-  background-color: #fff; /* Color de fondo de la pestaña activa */
+  background-color: transparent; /* Color de fondo de la pestaña activa */
   border-bottom: 1px solid #fff; /* Borde inferior de la pestaña activa */
-  color: #333; /* Color del texto */
+  color: $primary-color; /* Color del texto */
 }
 
 .tab-content {
@@ -490,11 +503,12 @@ a {
   width: 80%; /* Ancho del contenido */
   max-width: 1200px; /* Ancho máximo del contenido */
   padding: 20px; /* Espacio interno del contenido */
-  background-color: rgba(255, 255, 255, 0.9); /* Fondo con transparencia */
+  background-color: rgba(35, 35, 36, 0.9); /* Fondo con transparencia */
   border-radius: 10px; /* Bordes redondeados */
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1); /* Sombra difuminada */
   border: 1px solid rgba(0, 0, 0, 0.1); /* Borde con transparencia */
   z-index: 50; /* Asegura que el contenido esté detrás de las pestañas */
+  color:#d5d5d5;
 }
 
 
@@ -586,15 +600,15 @@ a {
   }
 
   div[skill-type="language"] {
-    color: #f1077c;
+    color: #2196f3; /* Azul */
   }
 
   div[skill-type="framework"] {
-    color: #dc73f1;
+    color: #64b5f6; /* Azul claro */
   }
 
   div[skill-type="tool"] {
-    color: #fecea8;
+    color: #bbdefb; /* Azul muy claro */
   }
 
   div[skill-weight="1"] {
@@ -630,6 +644,8 @@ a {
     display: none;
   }
 }
+
+
 
 /* Timeline Section */
 
@@ -870,6 +886,7 @@ a {
 
   .landing-title h1 {
     font-size: 3rem;
+    color:#000;
   }
 
   .landing-icons .social-link {
@@ -916,9 +933,14 @@ a {
       padding: 0.5rem 0.25rem;
       text-align: center;
       width: 21%;
+      color:#f7f6f6;
+      font-family: $font-family;
+      font-size: $font-size-base;
+      font-weight: normal;
 
       &:hover {
         letter-spacing: 0.25rem;
+        color: $primary-color
       }
     }
 
@@ -951,6 +973,7 @@ a {
       @include filter-out;
     }
   }
+
 
   .timeline-wrapper {
     .timeline {
